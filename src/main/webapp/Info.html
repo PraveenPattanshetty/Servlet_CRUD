@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(236, 217, 246);
+            color: blueviolet;
+        }
+
+        .container,
+        .container1,
+        .container2,
+        .container3 {
+            max-width: 350px;
+            margin: 10px auto;
+            border: 2px solid rgb(222, 207, 207);
+            text-align: center;
+            padding: 15px 20px;
+            background-color: rgb(246, 237, 252);
+            border-radius: 16px;
+            box-shadow: 0px 0px 100px rgb(229, 150, 249);
+
+        }
+
+        input {
+            display: block;
+            margin-bottom: 5px;
+            text-align: center;
+            padding: 4px 25px;
+            background-color: rgb(208, 253, 208);
+            border: 1px solid rgb(112, 151, 112);
+            border-radius: 6px;
+        }
+
+        input:hover {
+            background-color: rgb(169, 252, 169);
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .inner-container {
+            width: 220px;
+            margin: auto;
+        }
+
+        button {
+            background-color: rgb(138, 216, 216);
+            border-radius: 6px;
+            border: 1px solid rgb(72, 172, 172);
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(129, 247, 247);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="save" method="post">
+            <h2>ENTER DETAILS</h2>
+            <div class="inner-container">
+                <input type="text" name="name" placeholder="Enter Your Name">
+                <input type="tel" pattern="[0-9]{10}" name="mobile" placeholder="Enter Your Mobile Number"> <input
+                    type="text" placeholder="Enter Employee Id" name="empid">
+                <button>Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <div class=container1>
+        <form action="fetchById">
+            <h2>SEARCH BY EMPLOYEE IDs</h2>
+            <div class="inner-container">
+                <input type="text" placeholder="Enter Your Id" name="id">
+                <button>Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="container2">
+        <form action="fetchbyname">
+            <h2>SEARCH BY NAME</h2>
+            <div class="inner-container">
+                <input type="text" placeholder="Enter your Name" name="name">
+                <button>Search</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="container3">
+        <form action="fetchall" method="post">
+            <h2>FETCH ALL</h2>
+            <div class="inner-container">
+                <button>Fetch All</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
